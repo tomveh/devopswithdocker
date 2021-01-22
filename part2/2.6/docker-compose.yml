@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  frontend:
+    build: ../../frontend-example-docker
+    ports:
+      - 5000:5000
+  backend:
+    build: ../../backend-example-docker
+    ports:
+      - 8000:8000
+    environment:
+      REDIS: redis
+      DB_USERNAME: user
+      DB_PASSWORD: password
+      DB_NAME: backend_db
+      DB_HOST: db
+    depends_on:
+      - db
+      - redis
+  redis:
+    image: redis
+  db:
+    image: postgres
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: user
+      POSTGRES_DB: backend_db

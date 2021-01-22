@@ -1,0 +1,12 @@
+Mon, 28 Dec 2020 08:05:18 GMT
+Mon, 28 Dec 2020 08:05:21 GMT
+Mon, 28 Dec 2020 08:05:24 GMT
+Mon, 28 Dec 2020 08:05:27 GMT
+Secret message is:
+"Volume bind mount is easy"
+Mon, 28 Dec 2020 08:05:33 GMT
+Mon, 28 Dec 2020 08:05:36 GMT
+Mon, 28 Dec 2020 08:05:39 GMT
+Mon, 28 Dec 2020 08:05:42 GMT
+Secret message is:
+"Volume bind mount is easy"

@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  frontend:
+    build: ../../ml-kurkkumopo/ml-kurkkumopo-frontend
+    image: ml-kurkkumopo-frontend
+    ports:
+      - 3000:3000
+  backend:
+    build: ../../ml-kurkkumopo/ml-kurkkumopo-backend
+    image: ml-kurkkumopo-backend
+    volumes:
+      - model:/src/model
+    ports:
+      - 5000:5000
+  training:
+    build: ../../ml-kurkkumopo/ml-kurkkumopo-training
+    image: ml-kurkkumopo-training
+    volumes:
+      - model:/src/model
+      - imgs:/src/imgs
+
+volumes:
+  model:
+  imgs:
