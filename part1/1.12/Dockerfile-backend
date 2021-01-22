@@ -1,0 +1,17 @@
+FROM ubuntu
+
+COPY . /app
+
+WORKDIR /app
+
+ENV FRONT_URL="http://localhost:5000"
+
+RUN apt-get update &&\
+    apt-get install curl -y &&\
+    curl -sL https://deb.nodesource.com/setup_10.x | bash &&\
+    apt-get install nodejs -y &&\
+    npm install
+    
+CMD ["npm", "start"]
+
+EXPOSE 8000

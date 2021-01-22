@@ -1,0 +1,9 @@
+>>> ~ % docker run --rm -d --name ex devopsdockeruh/exec_bash_exercise
+b8d4f5c1e154293a8fd9ae0f9220ef948d480e398f50bd490e7b6da496378108
+>>> ~ % docker exec -it ex tail -f ./logs.txt                         
+Mon, 14 Dec 2020 11:17:55 GMT
+Mon, 14 Dec 2020 11:17:58 GMT
+Mon, 14 Dec 2020 11:18:01 GMT
+Mon, 14 Dec 2020 11:18:04 GMT
+Secret message is:
+"Docker is easy"
