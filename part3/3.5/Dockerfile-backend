@@ -1,0 +1,16 @@
+FROM node:alpine
+
+COPY . /app
+
+WORKDIR /app
+
+RUN npm install &&\
+	chown -R node /app
+
+USER node
+    
+ENV FRONT_URL="http://localhost:5000"
+
+CMD ["npm", "start"]
+
+EXPOSE 8000

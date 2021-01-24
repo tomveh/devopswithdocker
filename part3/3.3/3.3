@@ -1,0 +1,14 @@
+## This image has been tested with the following repo urls ##
+
+https://github.com/tomveh/docker-hy.github.io
+https://github.com/docker-hy/ml-kurkkumopo-frontend
+https://github.com/docker-hy/ml-kurkkumopo-backend
+https://github.com/docker-hy/ml-kurkkumopo-training
+
+## Example: ##
+
+docker run\
+	-v /var/run/docker.sock:/var/run/docker.sock \
+	--env USER="<username>" \
+	--env PASSWORD="<password>" \
+	dockerpush https://github.com/tomveh/docker-hy.github.io

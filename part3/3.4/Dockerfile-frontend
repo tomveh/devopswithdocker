@@ -1,0 +1,23 @@
+FROM ubuntu
+
+COPY . /app
+
+WORKDIR /app
+
+RUN apt-get update &&\
+	apt-get install curl -y &&\
+	curl -sL https://deb.nodesource.com/setup_10.x | bash &&\
+	apt-get install nodejs -y &&\
+	apt-get purge curl -y &&\
+	rm -rf /var/lib/apt/lists/* &&\
+	npm install &&\
+	useradd -m app &&\
+	chown -R app /app
+
+USER app
+
+ENV API_URL="http://localhost:8000"
+
+CMD ["npm", "start"]
+
+EXPOSE 5000

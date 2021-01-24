@@ -1,0 +1,16 @@
+DcoekrfFROM node:alpine
+
+COPY . /app
+
+WORKDIR /app
+
+RUN npm install &&\
+	chown -R node /app
+
+USER node
+
+ENV API_URL="http://localhost:8000"
+
+CMD ["npm", "start"]
+
+EXPOSE 5000
